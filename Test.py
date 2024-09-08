@@ -1,2 +1,4 @@
-print("Hello, World!")
-print("지금 이 문자열이 잘 나오는가?")
+
+
+file_name = "report.xls"
+print(file_name.endswith(("xlsx" , "xls")))

@@ -44,5 +44,5 @@ try:
     get_active_content()
 
 finally:
-    time.sleep(100)  # 5초 대기
+    time.sleep(100)  # 100초 대기
     driver.quit()

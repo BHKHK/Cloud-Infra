@@ -5,7 +5,7 @@ import sys
 def run_command(command):
     """
     주어진 명령어를 실행하고 그 결과를 반환합니다.
-
+    
     :param command: 실행할 쉘 명령어
     :return: 명령어 실행 성공 여부 (True/False)
     """

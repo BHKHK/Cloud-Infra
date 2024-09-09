@@ -66,7 +66,7 @@ def create_html_content(parsed_logs):
     for log in parsed_logs:
         html_content += f"""
             <tr>
-                <td>{log['timestamp']}</td>
+                <td>{log["timestamp"]}</td>
                 <td>{log['log_level']}</td>
                 <td>{log['message']}</td>
             </tr>

@@ -3,7 +3,6 @@ import sys
 from datetime import datetime
 from collections import deque
 
-
 def parse_log_file(file_path, num_lines):
     pattern = r"(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+\d{4}) (\w+) (.+)"
     parsed_logs = deque(maxlen=num_lines)
@@ -17,9 +16,10 @@ def parse_log_file(file_path, num_lines):
                     timestamp = datetime.strptime(
                         timestamp_str[:-5], "%Y-%m-%dT%H:%M:%S"
                     )
+                    formatted_timestamp = timestamp.strftime("%Y년 %m월 %d일 %p%I시 %M분 %S초")
                     parsed_logs.append(
                         {
-                            "timestamp": timestamp,
+                            "timestamp": formatted_timestamp,
                             "log_level": log_level,
                             "message": message.strip(),
                         }
@@ -33,7 +33,7 @@ def parse_log_file(file_path, num_lines):
     except Exception as e:
         print(f"오류 발생: {str(e)}")
         sys.exit(1)
-
+    
     return list(parsed_logs)
 
 

@@ -7,7 +7,7 @@ headers = {
 data = requests.get("https://www.naver.com", headers=headers)
 soup = BeautifulSoup(data.text, "html.parser")
 
-blind = soup.select("body .blind")
+blind = soup.select("body .service_name")
 
 # 결과를 파일로 저장
 with open("scraping_results.txt", "a", encoding="utf-8") as file:

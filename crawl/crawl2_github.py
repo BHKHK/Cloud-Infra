@@ -12,7 +12,7 @@ webdriver_options.add_argument(
 )
 
 driver = webdriver.Chrome(options=webdriver_options)
-driver.implicitly_wait(1)
+driver.implicitly_wait(1) # 너무 빨리 많은 리퀘스트를 보내지 않기 위해 시간 제한 설정(1초)
 
 url = "https://github.com/"
 driver.get(url)

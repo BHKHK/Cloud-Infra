@@ -2,7 +2,7 @@ import pandas as pd  # pip install pandas openpyxl
 import sys
 import os
 import csv
-
+# comma seperated value 쉼표로 분리
 
 def excel_to_csv(excel_file):
     try:

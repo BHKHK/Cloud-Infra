@@ -35,7 +35,7 @@ def get_github_repos(username, token):
 
 
 # 사용 예시
-username = "BHKHK"
+username = ""
 token = ""
 
 get_github_repos(username, token)

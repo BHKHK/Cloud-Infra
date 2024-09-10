@@ -32,5 +32,5 @@ print(f"입력된 이메일: {entered_email}")
 # print(driver.page_source)
 
 # 브라우저 종료
-# driver.quit()
 time.sleep(100)  # 100초 대기
+driver.quit()

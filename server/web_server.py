@@ -67,7 +67,7 @@ def run_server(base_dir, port=8080):
     server_running = True
 
     def handle_user_input():
-        nonlocal server_running
+        nonlocal server_running  # nonlocal로 선언하여 외부 전역변수와 연동하여 지역 변수가 아님을 알림
         while server_running:
             try:
                 user_input = input().strip().lower()
